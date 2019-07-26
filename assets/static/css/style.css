@@ -1,0 +1,24 @@
+.navbar {
+	width: 100%;
+	position: fixed;
+}
+
+.navbar-img {
+	width: 10%
+}
+
+.container {
+	position: relative;
+	top: 70px;
+}
+
+
+.description {
+    color : lightgrey;
+}
+
+.position-search {
+	position : fixed;
+	float: right;
+	right: 0;
+}
