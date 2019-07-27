@@ -44,7 +44,8 @@ var search  = function(item){
 			result = {
 
 				rating : object.rating,
-				url : "https://i.giphy.com/media/" + object.id + "/giphy_s.gif"
+				gif : "https://i.giphy.com/media/" + object.id + "/giphy_s.gif",
+				mp4 : "https://i.giphy.com/media/" + object.id + "/giphy.mp4"
 			}
 
 			results.push(result)
@@ -74,12 +75,35 @@ var displayResults = function(){
 
 	results.forEach(function(result){
 
-		dashboard  += '<div class="col-3 my-2 p-3 result-img text-center"><img src="' + result.url + '"><br><span class="rating">rating: ' + result.rating + '</span></div>'
+		dashboard  += '<div class="col-3 my-2 p-3 result-img text-center"><img src="' + result.gif + '"><br><span class="rating">rating: ' + result.rating + '</span></div>'
 
 	});
 
 	$('#list-results').html(dashboard);
+	animate();
+};
 
+var animate = function(){
+
+	$('img').on('click', function(){
+
+		var tail = $(this).attr('src').slice(($(this).attr('src').length - 6), ($(this).attr('src').length));
+
+		var gif = $(this).attr('src').slice(0, ($(this).attr('src').length - 6));
+
+		var mp4 = $(this).attr('src').slice(0, ($(this).attr('src').length - 4));
+
+		if (tail === '_s.gif') {
+			$(this).attr('src', gif + '.mp4');
+		}
+		else {
+			$(this).attr('src', mp4 + '_s.gif')
+		}
+
+		console.log(head);
+		console.log(tail);
+
+	});
 
 };
 
