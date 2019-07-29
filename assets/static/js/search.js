@@ -44,8 +44,8 @@ var search  = function(item){
 			result = {
 
 				rating : object.rating,
-				gif : "https://i.giphy.com/media/" + object.id + "/giphy_s.gif",
-				mp4 : "https://i.giphy.com/media/" + object.id + "/giphy.mp4"
+				gif : "http://i.giphy.com/media/" + object.id + "/giphy_s.gif",
+				mp4 : "http://i.giphy.com/media/" + object.id + "/giphy.mp4"
 			}
 
 			results.push(result)
@@ -99,9 +99,6 @@ var animate = function(){
 		else {
 			$(this).attr('src', mp4 + '_s.gif')
 		}
-
-		console.log(head);
-		console.log(tail);
 
 	});
 
