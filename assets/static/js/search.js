@@ -31,7 +31,7 @@ var addItem = function(){
 var search  = function(item){
 
 	//javascript, jQuery
-	var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + item + "&api_key=YbKUSy6efsg6WrXZxePkaEU5mEqsfaI8&limit=10");
+	var xhr = $.get("https://api.giphy.com/v1/gifs/search?q=" + item + "&api_key=YbKUSy6efsg6WrXZxePkaEU5mEqsfaI8&limit=10");
 
 	xhr.done(function(data) { 
 
